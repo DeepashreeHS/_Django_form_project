@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<style> 
+		fieldset{
+			width: 500px;
+			background-color: #7996b0;	
+			border:none;
+		}
+		#one{
+			background-color: #e1e8f2;
+			color:#085ba3 ;
+			border: none;
+		}
+		h1{
+			color: #3269c2;
+			font-family: monospace;
+		}
+		form{
+			font-family: serif;
+			font-style: revert;
+			word-spacing: 2px;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<center>
+
+		<h1>Fill Up the Following Details</h1>
+		<form method="POST">
+			<fieldset>
+			{{form.as_p}}
+			<input type="submit" name="submit" id="one" required>
+			{%csrf_token%}
+			</fieldset>
+		</form>
+	</center>
+</body>
+</html>
